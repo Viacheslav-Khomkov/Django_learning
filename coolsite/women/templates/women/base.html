@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+
+    {% block mainmenu %}
+
+        <ul>
+            {% for ind in menu %}
+            <li>{{ ind }}</li>
+            {% endfor %}
+        </ul>
+
+    {% endblock mainmenu%}
+
+</body>
+</html>

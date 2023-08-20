@@ -5,6 +5,9 @@ class Styles(models.Model):  # классы для CSS
     name = models.CharField(max_length=255)
     class_name = models.CharField(max_length=255)  # Название класса для оформления
 
+    def __str__(self):
+        return f'{self.name}'
+
 
 class Paragraphs(models.Model):  # Абзацы книг
     line = models.IntegerField()  # номер абзаца в книге
@@ -31,6 +34,8 @@ class Users(models.Model):
     email = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
 
+    def __str__(self):
+        return f'{self.name}'
 
 class UserProperties(models.Model):  # Настройки внешнего вида страницы для каждого пользователя и каждой книги
     user_id = models.IntegerField()  # Ссылка на пользователя
@@ -47,6 +52,9 @@ class Books(models.Model):
     isbn = models.CharField(max_length=20)
     lang_id = models.IntegerField()
 
+    def __str__(self):
+        return f'{self.name}'
+
 
 class Authors(models.Model):
     name = models.CharField(max_length=255)
@@ -59,16 +67,25 @@ class Authors(models.Model):
     country_id = models.IntegerField()
     lang_id = models.IntegerField()
 
+    def __str__(self):
+        return f'{self.name}'
 
 class Countries(models.Model):
     name = models.CharField(max_length=255)
     short_name = models.CharField(max_length=10)
     lang_id = models.IntegerField()
 
+    def __str__(self):
+        return f'{self.name}'
+
 
 class Languages(models.Model):
     name = models.CharField(max_length=255)
     short_name = models.CharField(max_length=10)
+
+    def __str__(self):
+        return f'{self.name} ({self.short_name})'
+
 
 
 
