@@ -28,6 +28,7 @@ urlpatterns = [
     path('bookshelf/', include('bookshelf.urls')),
 ]
 
+# Это необходимо для работы с медиа-файлами в процессе отладки
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
