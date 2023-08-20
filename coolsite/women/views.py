@@ -16,7 +16,6 @@ def categories(request, catid):
 def archive(request, year):
     if int(year) > 2023:
         return redirect('home', permanent=True)
-        # raise Http404()
     return HttpResponse(f"<h1>Архив по году {year}</h1>")
 
 def pageNotFound(request, exception):
