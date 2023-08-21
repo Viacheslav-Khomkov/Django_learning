@@ -18,7 +18,7 @@ class Tags(models.Model):  # классы для CSS
 
 class Paragraphs(models.Model):  # Абзацы книг
     book = models.ForeignKey('Books', on_delete=models.PROTECT)
-    tag = models.models.ForeignKey('Tags', on_delete=models.PROTECT, null=True)  # Ссылка на тэг HTML
+    tag = models.ForeignKey('Tags', on_delete=models.PROTECT, null=True)  # Ссылка на тэг HTML
     text = models.TextField(blank=True)  # Текст абзаца
 
 
