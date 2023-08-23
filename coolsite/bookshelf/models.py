@@ -151,7 +151,6 @@ class Authors(models.Model):
 
 class Countries(models.Model):
     name = models.CharField(max_length=100, db_index=True)
-    short_name = models.CharField(max_length=10)
     lang = models.ForeignKey('Languages', on_delete=models.PROTECT, null=True)
 
     def __str__(self):
