@@ -45,13 +45,14 @@ def login(request):
     return HttpResponse(f"<h1>Авторизация</h1>")
 
 
-def show_post(request, post_id):
-    post = get_object_or_404(Women, pk=post_id)
+def show_post(request, post_slug):
+    post = get_object_or_404(Women, slug=post_slug)
 
     context = {
         'post': post,
         'title': post.title,
         'cat_selected': post.cat_id,
+        'cat_slug_selected': post.cat.slug,
 
     }
     return render(request, 'women/post.html', context=context)

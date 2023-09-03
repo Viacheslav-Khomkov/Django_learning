@@ -7,7 +7,9 @@
 		<li> <a href="{% url 'home' %}">Все категории</a></li>
 
 {% endif %}
+
 {% for cat in cats %}
+
 	{% if cat.pk == cat_selected %}
 		<li class="selected">{{cat.name}}</li>
 
@@ -16,4 +18,5 @@
 		<li> <a href="{{ cat.get_absolute_url }}">{{cat.name}}</a></li>
 
 	{% endif %}
+
 {% endfor %}

@@ -29,3 +29,4 @@ def show_categories(sort=None, cat_selected=0):
 @register.inclusion_tag('women/main_menu.html')
 def show_main_menu():
     return {"menu": menu}
+
