@@ -10,7 +10,7 @@
 
 {% for cat in cats %}
 
-	{% if cat.pk == cat_selected %}
+	{% if cat.slug == cat_selected %}
 		<li class="selected">{{cat.name}}</li>
 
 	{% else %}
