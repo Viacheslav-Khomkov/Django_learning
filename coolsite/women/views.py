@@ -15,7 +15,6 @@ def index(request):
     posts = Women.objects.all()
     context = {
         'posts': posts,
-        # 'menu': menu,
         'title': 'Главная страница',
         'cat_selected': 0,
     }
@@ -24,14 +23,14 @@ def index(request):
 
 def about(request):
     return render(request, "women/about.html",
-                  {'menu': menu, 'title': 'About'})
+                  {'title': 'About', })
 
 
-def categories(request, cat_id):
-    if request.GET:
-        for par in request.GET:
-            print(par, request.GET[par])
-    return HttpResponse(f"<h1>Статьи по категориям women</h1><p>{cat_id}</p>")
+# def categories(request, cat_id):
+#     if request.GET:
+#         for par in request.GET:
+#             print(par, request.GET[par])
+#     return HttpResponse(f"<h1>Статьи по категориям women</h1><p>{cat_id}</p>")
 
 
 def add_page(request):

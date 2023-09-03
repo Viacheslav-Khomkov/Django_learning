@@ -19,7 +19,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 from coolsite import settings
-from women.views import index, categories, pageNotFound
+# from women.views import index, categories, pageNotFound
+from women.views import index, pageNotFound
 from bookshelf.views import index as bs_index
 
 urlpatterns = [
